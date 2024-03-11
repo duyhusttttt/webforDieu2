@@ -1,0 +1,269 @@
+/* all the body */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #ffffff;
+}
+/* tao hinh anh */
+.image-section {
+    flex-shrink: 0;
+}
+.responsive-image {
+    max-height: 600px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    transform: scale(1.4);
+    margin-right: 0%; 
+}
+/* content ( gan nhu la all the body) */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 60px 20px;
+    gap: 300px;
+    max-width: 1200px;
+    margin: auto;
+}
+/* text gioi thieu ( bao gom ca big title ) */
+.text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 500px;
+    width: 100%;
+}
+/* big title : wellcome back */
+h1 {
+    margin: 0 0 20px 0;
+}
+/* phan login */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+}
+.login-form input{
+    background: #F3F9FA;
+    padding: 15px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border: 1px solid #c9c7c7;
+    border-radius: 15px;
+}
+.login-form button {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+.login-form button.sign-in {
+    background: #162D3A;
+    color: #fff;
+    font-size: 16px; 
+    cursor: pointer;
+}
+.forgot-password{
+    text-align: right;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: #2b41ff;
+    text-decoration: none;
+}
+/* Or Sign in with */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #999;
+    margin: 20px 0;
+}
+.divider-text {
+    display: block;
+}
+
+.divider-mobile-text {
+    display: none;
+}
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #eee;
+    margin: 0px 10px;
+}
+/* hoac login bang social */
+.social-button {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 14px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    width: 93%; 
+}
+.social-button .mobile-text {
+    display: none;
+}
+.google-sign-in {
+    background-color: #F3F9FA;
+    color: rgb(0, 0, 0);
+}
+.facebook-sign-in {
+    background-color: #F3F9FA;
+    color: rgb(0, 0, 0);
+}
+.logo {
+    margin-right: 8px;
+    height: 20px;
+}
+/* khong co tai khoan thi sign up */
+.signup {
+    text-align: center; 
+    width: 100%; 
+    order: 3; 
+    font-size: 17px; 
+}
+.signup a {
+    text-decoration: none;
+    color: #2b41ff;
+}
+/* ban quyen */
+footer {
+    padding: 12px 0;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px; 
+    color: #aaa; 
+}
+
+/* for Mobile */
+
+@media (max-width: 768px) {
+/* tao hinh anh */ 
+.image-section {
+    width: 75%; 
+    padding-top: 33%; 
+    position: relative;
+    margin-top: -10px; 
+    margin-bottom: -200px;
+    margin-left: 3px;
+    order: 1; 
+}
+
+.responsive-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px; 
+}
+/* tao body */    
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin-top: -15px; 
+    }
+    h1{
+        margin-top: -18px; 
+    }
+    .text-section {
+        width: 90%;
+        padding: 0 5%; 
+        margin-top: -50px; 
+        margin-left: -25px;
+        position: relative; 
+        z-index: 1; 
+        order: 2; 
+    }
+    .text2{
+        margin-top: -20px; 
+    }
+ /* phan login */   
+    .login-form{
+        margin-top: -1px;
+    }
+    .login-form button{
+        width: 106%;
+    }
+    .login-form input{
+        margin-top: 4px;
+        margin-right: -20px;
+    }
+    .social-button .desktop-text {
+        display: none;
+    }
+    .social-button .mobile-text{
+        display: block;
+    }
+    .social-buttons-container {
+        display: flex;
+        justify-content: space-between ; 
+        width: 107%; 
+    }
+   
+    .social-buttons-container .google-sign-in{
+        flex-basis: 40%; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .social-buttons-container .facebook-sign-in{
+        flex-basis: 40%; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .signup{
+        margin-left: 10px;
+    }
+    .forgot-password{
+        margin-top: 0px;
+        margin-bottom: 15px;
+        
+        margin-right: -20px;
+    }
+    .divider {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #999;
+        margin-left: 20px;
+    }
+
+    .divider:before,
+    .divider:after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid #eee;
+        margin: 0px 10px;
+    }
+    .divider-mobile-text {
+        display: block;
+    }
+    .divider-text {
+        display: none;
+    }
+/* cuoi cung la ban quyen */    
+    footer {
+        font-size: 14px;
+        color: #999;
+        text-align: center;
+        margin-top: 30px;
+        margin-left: 30px; 
+        margin-bottom: -29px;
+    }
+}
